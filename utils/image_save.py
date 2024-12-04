@@ -8,7 +8,7 @@ UPLOAD_DIR = "images"
 
 
 def save_file(file: UploadFile) -> str:
-    if not file.filename.lower().endswith(("png", "jpg", "jpeg")):
+    if not file.filename.lower().endswith(("png", "jpg", "jpeg", "mp4")):
         raise HTTPException(status_code=400, detail="Faqat PNG, JPG yoki JPEG formatidagi rasmlar yuklash mumkin.")
 
     _, file_extension = os.path.splitext(file.filename)
